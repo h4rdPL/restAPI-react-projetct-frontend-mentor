@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/restAPI-react-projetct-frontend-mentor/static/css/main.073c9b0a.css",
+    "main.js": "/restAPI-react-projetct-frontend-mentor/static/js/main.ef1623e5.js",
+    "static/js/787.105f43f4.chunk.js": "/restAPI-react-projetct-frontend-mentor/static/js/787.105f43f4.chunk.js",
+    "static/media/logo.svg": "/restAPI-react-projetct-frontend-mentor/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/restAPI-react-projetct-frontend-mentor/index.html",
+    "main.073c9b0a.css.map": "/restAPI-react-projetct-frontend-mentor/static/css/main.073c9b0a.css.map",
+    "main.ef1623e5.js.map": "/restAPI-react-projetct-frontend-mentor/static/js/main.ef1623e5.js.map",
+    "787.105f43f4.chunk.js.map": "/restAPI-react-projetct-frontend-mentor/static/js/787.105f43f4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.ef1623e5.js"
+  ]
+}
