@@ -1,5 +1,4 @@
 import React from "react";
-import { BiSearch } from "react-icons/bi";
 import { Input } from "./Input";
 export default {
   title: "Example/Atoms/Input",
