@@ -1,14 +1,30 @@
-// import styled from "styled-components";
 import React from "react";
-import Select from "react-select";
-const options = [
-  { value: "Africa", label: "Africa" },
-  { value: "America", label: "America" },
-  { value: "Asia", label: "Asia" },
-  { value: "Europe", label: "Europe" },
-  { value: "Oceania", label: "Oceania" },
-];
+import styled from "styled-components";
+
+const Select = styled.select`
+  width: 100%;
+  background: white;
+  color: gray;
+  font-size: 14px;
+  border: none;
+  padding: 15px 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  // arrow
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+`;
 
 export const ContinentSelect = () => (
-  <Select placeholder={"Filter by Region"} options={options} />
+  <Select>
+    <option value="" hidden disabled selected>
+      Filter by Region
+    </option>
+    <option value="1">Africa</option>
+    <option value="3">America</option>
+    <option value="2">Asia</option>
+    <option value="4">Europe</option>
+    <option value="4">Oceania</option>
+  </Select>
 );
