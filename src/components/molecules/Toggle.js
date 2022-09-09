@@ -8,6 +8,7 @@ export const ToggleWrapper = styled.div`
 
 export const Paragraph = styled.p`
   font-size: 20px;
+  font-weight: 600;
 `;
 
 export const ToggleIcon = styled.img`
