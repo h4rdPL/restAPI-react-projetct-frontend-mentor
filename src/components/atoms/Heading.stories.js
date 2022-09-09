@@ -6,6 +6,5 @@ export default {
   component: Heading,
 };
 
-export const Logo = () => <Heading>Where in the world?</Heading>;
-export const CountryDetailHeading = () => <Heading>Belgium</Heading>;
-export const CountryHeading = () => <Heading>Belgium</Heading>;
+export const MainHeader = () => <Heading big>Where in the world?</Heading>;
+export const CountryHeading = () => <Heading detailsHeader>Germany</Heading>;

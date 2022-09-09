@@ -10,10 +10,11 @@ const Select = styled.select`
   padding: 15px 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  // arrow
-  -moz-appearance: none; /* Firefox */
-  -webkit-appearance: none; /* Safari and Chrome */
-  appearance: none;
+  background-color: ${({ theme }) => theme.lightTheme.veryLightGray};
+  border-radius: 5px;
+  option {
+    background-color: ${({ theme }) => theme.lightTheme.veryLightGray};
+  }
 `;
 
 export const ContinentSelect = () => (
