@@ -24,12 +24,6 @@ export const GridTemplate = () => {
   return (
     <Wrapper>
       <Detail />
-      <Detail />
-      <Detail />
-      <Detail />
-      <Detail />
-      <Detail />
-      <Detail />
     </Wrapper>
   );
 };

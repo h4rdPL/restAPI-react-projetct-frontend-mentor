@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 const Select = styled.select`
   width: 50%;
   background: white;
@@ -30,5 +29,6 @@ export const ContinentSelect = () => (
     <option value="2">Asia</option>
     <option value="4">Europe</option>
     <option value="4">Oceania</option>
+    <option value="4">All</option>
   </Select>
 );

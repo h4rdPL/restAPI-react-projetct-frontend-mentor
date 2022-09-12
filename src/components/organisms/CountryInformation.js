@@ -19,5 +19,5 @@ export const InformationContainer = styled.div`
   padding: 1.5rem 2rem;
 `;
 export const CountryImg = styled.img`
-  width: 100%;
+  max-width: 100%;
 `;
