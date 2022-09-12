@@ -1,13 +1,15 @@
-import { FilterTemplate } from "./templates/FilterTemplate";
-import { GridTemplate } from "./templates/GridTemplate";
-import { MainTemplate } from "./templates/MainTemplate";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { DetailPage } from "./views/DetailPage";
+import { HomePage } from "./views/HomePage";
 function App() {
   return (
     <>
-      <MainTemplate>
-        <FilterTemplate />
-        <GridTemplate />
-      </MainTemplate>
+      <BrowserRouter>
+        <Routes>
+          <Route exac path="/" element={<HomePage />}></Route>
+          <Route path=":id" element={<DetailPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

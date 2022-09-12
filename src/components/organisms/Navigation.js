@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Heading } from "../atoms/Heading";
 import { DarkMode } from "../molecules/Toggle";
 export const Navigation = styled.nav`
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 2rem;

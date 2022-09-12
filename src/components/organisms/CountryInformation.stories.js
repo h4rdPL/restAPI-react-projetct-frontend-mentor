@@ -8,11 +8,11 @@ import { MainInformation } from "../atoms/NameElement";
 import { Heading } from "../atoms/Heading";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 export default {
   title: "Example/Organisms/Country Informations",
   component: CountryWrapper,
 };
-
 export const Detail = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -28,11 +28,13 @@ export const Detail = () => {
     };
     getData();
   }, []);
+  const { params } = useParams();
+  console.log(params);
   console.log(data);
   return (
     <>
-      {data.map(({ name, population, flags, region, capital }) => (
-        <CountryWrapper>
+      {data.map(({ name, population, flags, region, capital, alpha3Code }) => (
+        <CountryWrapper as={Link} to={alpha3Code}>
           <CountryImg src={flags.svg} alt="Heyyyy" />
           <InformationContainer>
             <Heading information>{name}</Heading>
