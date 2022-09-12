@@ -10,6 +10,6 @@ export const theme = {
   lightTheme: {
     veryDarkBlueText: "hsl(200, 15%, 8%)", // text
     darkGray: "hsl(0, 0%, 52%)", // input
-    veryLightGray: "hsl(0, 0%, 98%)", // background  
+    veryLightGray: "hsl(0, 0%, 98%)", // background
   },
 };

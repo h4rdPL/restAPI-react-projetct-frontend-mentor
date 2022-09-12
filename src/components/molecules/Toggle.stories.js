@@ -1,14 +1,12 @@
 import React from "react";
-import { ToggleWrapper, ToggleIcon, Paragraph } from "./Toggle";
-import test from "../../assets/themeToggle.svg";
+import { DarkMode } from "./Toggle";
 export default {
-  title: "Example/molecules/toggle",
-  component: ToggleWrapper,
+  title: "Example/molecules/Toggle",
+  component: DarkMode,
 };
 
-export const darkMode = () => (
-  <ToggleWrapper>
-    <ToggleIcon src={test} />
-    <Paragraph>Dark Mode</Paragraph>
-  </ToggleWrapper>
-);
+function Primary() {
+  return <DarkMode />;
+}
+
+export const Toggle = Primary.bind({});

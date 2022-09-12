@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Select = styled.select`
-  width: 100%;
+  width: 50%;
   background: white;
   color: gray;
   font-size: 14px;
@@ -14,6 +14,9 @@ const Select = styled.select`
   border-radius: 5px;
   option {
     background-color: ${({ theme }) => theme.lightTheme.veryLightGray};
+  }
+  @media (min-width: 1400px) {
+    width: 20%;
   }
 `;
 
