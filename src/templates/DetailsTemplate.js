@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 const Wrapper = styled.div`
   min-width: 100%;
   padding: 2rem;
+  @media (min-width: 1400px) {
+    padding: 2rem 4rem;
+  }
 `;
 
 const StyledButton = styled(Button)`
@@ -18,6 +21,11 @@ const StyledButton = styled(Button)`
 const DetailsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
 `;
 
 const DetailsInformationWrapper = styled.div`
@@ -29,9 +37,21 @@ const CountryImg = styled.img`
   min-width: 100%;
   height: 300px;
   margin-bottom: 3rem;
+  @media (min-width: 1400px) {
+    min-width: 80%;
+    height: 450px;
+  }
 `;
-const FirstList = styled.ul``;
-const SecondList = styled.ul``;
+const FirstList = styled.ul`
+  @media (min-width: 1400px) {
+    grid-column: 1/2;
+  }
+`;
+const SecondList = styled.ul`
+  @media (min-width: 1400px) {
+    grid-column: 2/-1;
+  }
+`;
 const ThirdList = styled.div``;
 const BorderCountriesWrapper = styled.div`
   display: flex;
