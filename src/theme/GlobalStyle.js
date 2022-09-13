@@ -16,4 +16,12 @@ export default createGlobalStyle`
     h2 {
         margin: 0;
     }
+    a {
+        text-decoration: none;
+        color: black;
+        width: fit-content;
+    }
+    ul {
+        list-style: none;
+    }
 `;

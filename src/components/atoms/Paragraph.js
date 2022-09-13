@@ -7,4 +7,11 @@ export const Paragraph = styled.p`
     css`
       font-weight: bold;
     `}
+  ${({ borderCountries }) =>
+    borderCountries &&
+    css`
+      padding: 0.5rem 1rem;
+      /* border: 1px solid #000; */
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    `}
 `;
