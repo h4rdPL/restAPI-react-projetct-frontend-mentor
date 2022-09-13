@@ -64,7 +64,7 @@ export const DetailsTemplate = ({
             <FirstList>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Native Name</MainInformation> {population}
+                  <MainInformation>Native Name</MainInformation> {country}
                 </Paragraph>
               </ListItems>
               <ListItems>
