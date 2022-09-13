@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CountryWrapper = styled.div`
-  /* justify-self: center; */
+  position: relative;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
@@ -20,4 +20,11 @@ export const InformationContainer = styled.div`
 `;
 export const CountryImg = styled.img`
   max-width: 100%;
+`;
+
+export const Spinner = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
