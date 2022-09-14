@@ -34,11 +34,15 @@ const DetailsInformationWrapper = styled.div`
   row-gap: 2rem;
 `;
 const CountryImg = styled.img`
-  min-width: 100%;
-  height: 300px;
+  min-width: 50%;
+  justify-self: center;
+  height: 140px;
   margin-bottom: 3rem;
+  @media (min-width: 768px) {
+    min-width: 30%;
+  }
   @media (min-width: 1400px) {
-    min-width: 80%;
+    width: 80%;
     height: 450px;
   }
 `;

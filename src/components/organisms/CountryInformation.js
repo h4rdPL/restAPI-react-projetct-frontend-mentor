@@ -19,7 +19,10 @@ export const InformationContainer = styled.div`
   padding: 1.5rem 2rem;
 `;
 export const CountryImg = styled.img`
+  width: 400px;
   max-width: 100%;
+  height: 190px;
+  object-position: center;
 `;
 
 export const Spinner = styled.div`

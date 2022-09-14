@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { MainTemplate } from "../templates/MainTemplate";
 import { DetailsTemplate } from "../templates/DetailsTemplate";
 import axios from "axios";
 export const DetailPage = () => {
-  const { location } = useLocation();
-  const dummyCountry = {
-    id: 1,
-    country: "Belgium",
-    population: "2000000",
-    region: "Europe",
-    subRegion: "Western Europe",
-    capital: "Brussels",
-    topLevelDomain: ".be",
-    currencies: "Euro",
-    languages: "Dutch, French, German",
-  };
+  // const dummyCountry = {
+  //   id: 1,
+  //   country: "Belgium",
+  //   population: "2000000",
+  //   region: "Europe",
+  //   subRegion: "Western Europe",
+  //   capital: "Brussels",
+  //   topLevelDomain: ".be",
+  //   currencies: "Euro",
+  //   languages: "Dutch, French, German",
+  // };
   const [data, setData] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
   let params = useParams();
