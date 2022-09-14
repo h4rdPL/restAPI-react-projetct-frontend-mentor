@@ -70,6 +70,9 @@ export const DetailsTemplate = ({
   topLevelDomain,
   currencies,
   languages,
+  flag,
+  nativeName,
+  borderCountries,
 }) => {
   return (
     <>
@@ -78,13 +81,13 @@ export const DetailsTemplate = ({
           <HiOutlineArrowNarrowLeft /> Back
         </StyledButton>
         <DetailsWrapper>
-          <CountryImg src="https://flagcdn.com/be.svg" alt="Belgium" />
+          <CountryImg src={flag} alt="Belgium" />
           <DetailsInformationWrapper>
             <Heading big>{country}</Heading>
             <FirstList>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Native Name</MainInformation> {country}
+                  <MainInformation>Native Name</MainInformation> {nativeName}
                 </Paragraph>
               </ListItems>
               <ListItems>
@@ -129,9 +132,15 @@ export const DetailsTemplate = ({
             <ThirdList>
               <MainInformation>Border Countries:</MainInformation>
               <BorderCountriesWrapper>
-                <Paragraph borderCountries>France</Paragraph>
-                <Paragraph borderCountries>Germany</Paragraph>
-                <Paragraph borderCountries>Netherlands</Paragraph>
+                {borderCountries ? (
+                  borderCountries.map((border) => (
+                    <Paragraph key={border} borderCountries>
+                      {border}
+                    </Paragraph>
+                  ))
+                ) : (
+                  <Paragraph borderCountries>No border</Paragraph>
+                )}
               </BorderCountriesWrapper>
             </ThirdList>
           </DetailsInformationWrapper>

@@ -8,6 +8,9 @@ export const Navigation = styled.nav`
   justify-content: space-between;
   padding: 1.5rem 2rem;
   box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.1);
+  @media (min-width: 1400px) {
+    padding: 1.5rem 4rem;
+  }
 `;
 
 export const Menu = () => (

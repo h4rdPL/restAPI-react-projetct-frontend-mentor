@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 5rem;
+  padding: 2rem;
   @media (min-width: 768px) {
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
@@ -17,8 +18,8 @@ const Wrapper = styled.div`
   @media (min-width: 1400px) {
     justify-content: space-between;
     grid-template-columns: repeat(4, 1fr);
+    padding: 2rem 4rem;
   }
-  padding: 2rem;
 `;
 export const GridTemplate = () => {
   return (
