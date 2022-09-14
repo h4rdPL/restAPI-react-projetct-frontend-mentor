@@ -59,6 +59,7 @@ const SecondList = styled.ul`
 const ThirdList = styled.div``;
 const BorderCountriesWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   grid-gap: 1rem;
   margin-top: 1rem;
 `;
