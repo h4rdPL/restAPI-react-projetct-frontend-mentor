@@ -19,12 +19,17 @@ export default {
 };
 export const Detail = () => {
   const [query, setQuery] = useState("");
+  const [filterQuery, setFilterQuery] = useState("");
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const updateQuery = (e) => {
     setQuery(e.target.value);
-    console.log(e);
+    getFilteredItems();
+  };
+
+  const handleChange = (e) => {
+    setFilterQuery(e.target.value);
     getFilteredItems();
   };
 
@@ -42,20 +47,23 @@ export const Detail = () => {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const getFilteredItems = (query, data) => {
-    if (!query) {
+
+  const getFilteredItems = (filterQuery, query, data) => {
+    if (query) {
+      return query ? data.filter((item) => item.name.includes(query)) : data;
+    } else if (filterQuery) {
+      return filterQuery
+        ? data.filter((item) => item.region.includes(filterQuery))
+        : data;
+    } else {
       return data;
     }
-    return data.filter((item) => {
-      return item.name.includes(query);
-    });
   };
 
-  console.log(query);
-  const filteredItems = getFilteredItems(query, data);
+  const filteredItems = getFilteredItems(filterQuery, query, data);
   return (
     <>
-      <FilterTemplate updateQuery={updateQuery} filteredItems={filteredItems} />
+      <FilterTemplate handleChange={handleChange} updateQuery={updateQuery} />
 
       {isLoading ? (
         <Spinner>
