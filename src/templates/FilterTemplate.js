@@ -7,17 +7,22 @@ const Wrapper = styled.div`
   flex-direction: column;
   row-gap: 1rem;
   justify-content: space-between;
-  padding: 2rem;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+
   @media (min-width: 1400px) {
     flex-direction: row;
-    padding: 2rem 4rem;
   }
 `;
 
-export const FilterTemplate = () => {
+export const FilterTemplate = ({ filteredItems }) => {
   return (
     <Wrapper>
-      <Input placeholder={"Search for a country"} />
+      <Input
+        type={"search"}
+        placeholder={"Search for a country"}
+        onChange={filteredItems}
+      />
       <ContinentSelect />
     </Wrapper>
   );

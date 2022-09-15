@@ -9,16 +9,20 @@ import { MainInformation } from "../atoms/NameElement";
 import { Heading } from "../atoms/Heading";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Dna } from "react-loader-spinner";
+import { FilterTemplate } from "../../templates/FilterTemplate";
 
 export default {
   title: "Example/Organisms/Country Informations",
   component: CountryWrapper,
 };
 export const Detail = () => {
+  const [query, setQuery] = useState("");
+
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const getData = async () => {
       const URL = `https://restcountries.com/v2/all`;
@@ -33,11 +37,20 @@ export const Detail = () => {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const { params } = useParams();
-  console.log(params);
-  console.log(data);
+  const getFilteredItems = (query, data) => {
+    if (!query) {
+      return data;
+    }
+    return data.filter((item) => {
+      return item.name.includes(query);
+    });
+  };
+  console.log(query);
+  const filteredItems = getFilteredItems(query, data);
   return (
     <>
+      <FilterTemplate filteredItems={filteredItems} />
+
       {isLoading ? (
         <Spinner>
           <Dna
@@ -50,39 +63,26 @@ export const Detail = () => {
           />
         </Spinner>
       ) : (
-        data.map(({ name, population, flags, region, capital, alpha3Code }) => (
-          <CountryWrapper as={Link} to={alpha3Code}>
-            <CountryImg src={flags.svg} alt="Heyyyy" />
-            <InformationContainer>
-              <Heading information>{name}</Heading>
-              <Paragraph>
-                <MainInformation>Population:</MainInformation> {population}
-              </Paragraph>
-              <Paragraph>
-                <MainInformation> Region:</MainInformation> {region}
-              </Paragraph>
-              <Paragraph>
-                <MainInformation>Capital:</MainInformation> {capital}
-              </Paragraph>
-            </InformationContainer>
-          </CountryWrapper>
-        ))
+        filteredItems.map(
+          ({ name, population, flags, region, capital, alpha3Code }) => (
+            <CountryWrapper as={Link} to={alpha3Code} key={name}>
+              <CountryImg src={flags.svg} alt="Heyyyy" />
+              <InformationContainer>
+                <Heading information>{name}</Heading>
+                <Paragraph>
+                  <MainInformation>Population:</MainInformation> {population}
+                </Paragraph>
+                <Paragraph>
+                  <MainInformation> Region:</MainInformation> {region}
+                </Paragraph>
+                <Paragraph>
+                  <MainInformation>Capital:</MainInformation> {capital}
+                </Paragraph>
+              </InformationContainer>
+            </CountryWrapper>
+          )
+        )
       )}
     </>
-    // <CountryWrapper>
-    //   <CountryImg src={flag} alt="Heyyyy" />
-    //   <InformationContainer>
-    //     <Heading information>Poland {data[100].name}</Heading>
-    //     <Paragraph>
-    //       <MainInformation>Population:</MainInformation> 81,91991 919
-    //     </Paragraph>
-    //     <Paragraph>
-    //       <MainInformation> Region:</MainInformation> Europe
-    //     </Paragraph>
-    //     <Paragraph>
-    //       <MainInformation>Capital:</MainInformation> Warsaw
-    //     </Paragraph>
-    //   </InformationContainer>
-    // </CountryWrapper>
   );
 };
