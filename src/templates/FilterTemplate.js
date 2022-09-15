@@ -15,13 +15,13 @@ const Wrapper = styled.div`
   }
 `;
 
-export const FilterTemplate = ({ filteredItems }) => {
+export const FilterTemplate = ({ filteredItems, updateQuery }) => {
   return (
     <Wrapper>
       <Input
         type={"search"}
         placeholder={"Search for a country"}
-        onChange={filteredItems}
+        onChange={updateQuery}
       />
       <ContinentSelect />
     </Wrapper>

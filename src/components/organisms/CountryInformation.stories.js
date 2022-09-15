@@ -19,9 +19,14 @@ export default {
 };
 export const Detail = () => {
   const [query, setQuery] = useState("");
-
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const updateQuery = (e) => {
+    setQuery(e.target.value);
+    console.log(e);
+    getFilteredItems();
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -45,11 +50,12 @@ export const Detail = () => {
       return item.name.includes(query);
     });
   };
+
   console.log(query);
   const filteredItems = getFilteredItems(query, data);
   return (
     <>
-      <FilterTemplate filteredItems={filteredItems} />
+      <FilterTemplate updateQuery={updateQuery} filteredItems={filteredItems} />
 
       {isLoading ? (
         <Spinner>
