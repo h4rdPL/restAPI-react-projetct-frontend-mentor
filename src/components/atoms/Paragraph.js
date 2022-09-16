@@ -14,5 +14,9 @@ export const Paragraph = styled.p`
       /* border: 1px solid #000; */
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
       cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.8;
+      }
     `}
 `;

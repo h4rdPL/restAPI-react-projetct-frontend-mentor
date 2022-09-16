@@ -16,12 +16,15 @@ const Wrapper = styled.div`
 `;
 
 const StyledButton = styled(Button)`
+  color: ${({ theme }) => theme.text};
+
   margin-bottom: 4rem;
 `;
 const DetailsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   align-items: center;
+  color: ${({ theme }) => theme.text};
   @media (min-width: 1400px) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
@@ -94,45 +97,45 @@ export const DetailsTemplate = ({
             <FirstList>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Native Name</MainInformation> {nativeName}
+                  <MainInformation>Native Name:</MainInformation> {nativeName}
                 </Paragraph>
               </ListItems>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Population</MainInformation> {population}
+                  <MainInformation>Population:</MainInformation> {population}
                 </Paragraph>
               </ListItems>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Region</MainInformation> {region}
+                  <MainInformation>Region:</MainInformation> {region}
                 </Paragraph>
               </ListItems>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Sub Region</MainInformation> {subRegion}
+                  <MainInformation>Sub Region:</MainInformation> {subRegion}
                 </Paragraph>
               </ListItems>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Capital</MainInformation> {capital}
+                  <MainInformation>Capital:</MainInformation> {capital}
                 </Paragraph>
               </ListItems>
             </FirstList>
             <SecondList>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Top level Domain</MainInformation>{" "}
+                  <MainInformation>Top level Domain:</MainInformation>{" "}
                   {topLevelDomain}
                 </Paragraph>
               </ListItems>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>Currencies</MainInformation> {currencies}
+                  <MainInformation>Currencies:</MainInformation> {currencies}
                 </Paragraph>
               </ListItems>
               <ListItems>
                 <Paragraph>
-                  <MainInformation>languages</MainInformation> {languages}
+                  <MainInformation>languages:</MainInformation> {languages}
                 </Paragraph>
               </ListItems>
             </SecondList>

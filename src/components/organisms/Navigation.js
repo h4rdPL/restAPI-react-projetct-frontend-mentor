@@ -14,11 +14,11 @@ export const Navigation = styled.nav`
   }
 `;
 
-export const Menu = () => (
+export const Menu = ({ themeToggle, dark }) => (
   <Navigation>
     <Heading as={Link} to="/">
       Where in the world?
     </Heading>
-    <DarkMode />
+    <DarkMode dark={dark} themeToggle={themeToggle} />
   </Navigation>
 );

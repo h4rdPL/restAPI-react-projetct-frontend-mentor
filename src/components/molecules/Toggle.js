@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import test from "../../assets/themeToggle.svg";
-
+import icon from "../../assets/themeToggle.svg";
+import React from "react";
 export const ToggleWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -25,9 +25,11 @@ export const ToggleIcon = styled.img`
   height: 20px;
 `;
 
-export const DarkMode = () => (
-  <ToggleWrapper>
-    <ToggleIcon src={test} />
-    <Paragraph>Dark Mode</Paragraph>
-  </ToggleWrapper>
-);
+export const DarkMode = ({ themeToggle }) => {
+  return (
+    <ToggleWrapper onClick={themeToggle}>
+      <ToggleIcon src={icon} />
+      <Paragraph>Dark Mode</Paragraph>
+    </ToggleWrapper>
+  );
+};

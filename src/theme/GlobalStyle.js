@@ -8,6 +8,7 @@ export default createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        /* transition-duration:  .12s ; */
     }
     body {
         font-family:'Nunito Sans', sans-serif;
@@ -26,4 +27,5 @@ export default createGlobalStyle`
     ul {
         list-style: none;
     }
+
 `;

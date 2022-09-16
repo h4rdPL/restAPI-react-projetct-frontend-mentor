@@ -11,8 +11,7 @@ export const darkTheme = {
   background: "hsl(207, 26%, 17%)", // background
 };
 export const lightTheme = {
-  text: "hsl(0,0%,0%)",
-  veryDarkBlueText: "hsl(200, 15%, 8%)", // text
+  text: "hsl(200, 15%, 8%)", // text
   darkGray: "hsl(0, 0%, 52%)", // input
   background: "hsl(0, 0%, 98%)", // background
 };
