@@ -80,7 +80,7 @@ export const Detail = () => {
         filteredItems.map(
           ({ name, population, flags, region, capital, alpha3Code }) => (
             <CountryWrapper as={Link} to={alpha3Code} key={name}>
-              <CountryImg src={flags.svg} alt="Heyyyy" />
+              <CountryImg src={flags.svg} alt="flag" />
               <InformationContainer>
                 <Heading information>{name}</Heading>
                 <Paragraph>

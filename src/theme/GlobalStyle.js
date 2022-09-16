@@ -11,14 +11,16 @@ export default createGlobalStyle`
     }
     body {
         font-family:'Nunito Sans', sans-serif;
+        background: ${({ theme }) => theme.background} ;
 
     }
     h2 {
         margin: 0;
     }
+
     a {
+        color: ${({ theme }) => theme.text};
         text-decoration: none;
-        color: black;
         width: fit-content;
     }
     ul {

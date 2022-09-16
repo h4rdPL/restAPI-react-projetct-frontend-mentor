@@ -42,7 +42,6 @@ export const DetailPage = () => {
       <MainTemplate>
         {data.map(
           ({
-            area,
             capital,
             region,
             subregion,
@@ -52,7 +51,6 @@ export const DetailPage = () => {
             currencies,
             population,
             languages,
-            nativeName,
             borders,
           }) => (
             <DetailsTemplate

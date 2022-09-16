@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const CountryWrapper = styled.div`
   position: relative;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.darkBlue};
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  color: ${({ theme }) => theme.text};
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   &:hover {
@@ -19,10 +20,8 @@ export const InformationContainer = styled.div`
   padding: 1.5rem 2rem;
 `;
 export const CountryImg = styled.img`
-  width: 400px;
-  max-width: 100%;
-  height: 190px;
-  object-position: center;
+  height: auto;
+  width: 100%;
 `;
 
 export const Spinner = styled.div`

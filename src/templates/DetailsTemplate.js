@@ -38,6 +38,8 @@ const CountryImg = styled.img`
   justify-self: center;
   height: 140px;
   margin-bottom: 3rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
   @media (min-width: 768px) {
     min-width: 30%;
   }

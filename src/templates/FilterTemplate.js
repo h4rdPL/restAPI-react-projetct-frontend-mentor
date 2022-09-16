@@ -17,16 +17,16 @@ const Wrapper = styled.div`
 const Select = styled.select`
   width: 50%;
   background: white;
-  color: gray;
+  color: ${({ theme }) => theme.text};
   font-size: 14px;
   border: none;
   padding: 15px 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  background-color: ${({ theme }) => theme.lightTheme.veryLightGray};
+  background-color: ${({ theme }) => theme.background};
   border-radius: 5px;
   option {
-    background-color: ${({ theme }) => theme.lightTheme.veryLightGray};
+    background-color: ${({ theme }) => theme.background};
   }
   @media (min-width: 1400px) {
     width: 20%;
